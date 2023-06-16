@@ -2,3 +2,6 @@
 /plugins
 /themes/twentytwentythree
 /uploads
+/themes/pet-store/node_modules
+themes/pet-store/package-lock.json
+themes/pet-store/style.css.map
