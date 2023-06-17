@@ -653,6 +653,17 @@ textarea {
 }
 .main-navigation li {
   position: relative;
+  border-radius: 4px;
+  border: 1px solid #5c433f;
+  padding: 10px 15px;
+  margin: 0 5px;
+}
+.main-navigation li a {
+  color: #5c433f;
+  font-weight: 400;
+}
+.main-navigation li:hover, .main-navigation li.focus {
+  background-color: #eeddcd;
 }
 .main-navigation a {
   display: block;
