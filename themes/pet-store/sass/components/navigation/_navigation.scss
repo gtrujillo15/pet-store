@@ -63,6 +63,10 @@
 		&.focus {
 			background-color: $color__background-tan;
 		}
+
+	}
+	.active {
+		background-color: $color__background-tan;
 	}
 
 	a {
@@ -82,6 +86,7 @@
 		max-width: 1170px;
 		margin: auto;
 		padding: 10px 20px 0 20px;
+		position: sticky;
 		.site-branding {
 			.website-title {
 				font-family: $font__heading;

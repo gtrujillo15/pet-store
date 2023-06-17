@@ -665,6 +665,9 @@ textarea {
 .main-navigation li:hover, .main-navigation li.focus {
   background-color: #eeddcd;
 }
+.main-navigation .active {
+  background-color: #eeddcd;
+}
 .main-navigation a {
   display: block;
   text-decoration: none;
@@ -673,6 +676,7 @@ textarea {
   max-width: 1170px;
   margin: auto;
   padding: 10px 20px 0 20px;
+  position: sticky;
 }
 .site-header .site-header-wrapper .site-branding .website-title {
   font-family: "Satisfy", cursive;
