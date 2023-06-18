@@ -5,14 +5,36 @@
         margin: auto;
         padding: 20px;
         .footer-right-border {
-            border-right: 1px solid #333;
+            border-right: 1px solid $color__background-gray;
         }
         .custom-logo {
             height: 75px;
             width: auto;
         }
-        .footer-left-border {
-            border-left: 1px solid #333;
+        .footer-left-border, .social-media {
+            border-left: 1px solid $color__background-gray;
+            padding-left: 4rem;
+            .social-media-link {
+                text-decoration: none;
+                color: $color__text-brown;
+                fill: $color__text-brown;
+                margin: 3px 0;
+                &:hover, &:focus, &:target {
+                    color: $color__text-black;
+                    fill: $color__background-black;
+                }
+                p {
+                    display: inline-block;
+                    font-weight: 500;
+                    &:hover, &:focus, &:target {
+                        text-decoration: underline;
+                    }
+                }
+                svg {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
         }
         a {
             color: $color__text-brown;
@@ -21,5 +43,6 @@
                 text-decoration: underline;
             }
         }
+
     }
 }

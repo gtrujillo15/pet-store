@@ -146,17 +146,5 @@ function fusd_customize_register( $wp_customize ) {
 		'label' => __( 'LinkedIn Link' ),
 		'description' => __( 'Enter in the URL for LinkedIn.' ),
 	));
-	// Instagram Link
-	$wp_customize->add_setting( 'footer_instagram_url', array(
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-	));
-	$wp_customize->add_control( 'footer_instagram_url', array(
-		'type' => 'url',
-		'section' => 'pet_store_social_media',
-		'label' => __( 'Instagram Link' ),
-		'description' => __( 'Enter in the URL for Instagram.' ),
-	));
-
 }
 add_action( 'customize_register', 'fusd_customize_register' );

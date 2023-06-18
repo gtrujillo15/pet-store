@@ -20,7 +20,7 @@ $instagram_url = get_theme_mod('footer_instagram_url');
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info d-flex flex-row justify-content-center align-items-center">
+		<div class="site-info d-flex flex-column flex-lg-row justify-content-center align-items-center">
 			<!-- Logo -->
 			<div class="footer-right-border col-12 col-lg-3">
 				<?php the_custom_logo(); ?>
@@ -46,10 +46,20 @@ $instagram_url = get_theme_mod('footer_instagram_url');
 					<?php endif; ?>
 				</div>
 			<?php endif; ?>
-
 			<!-- Social Media -->
-			<div class="footer-left-border col-12 col-lg-4">
-				
+			<div class="social-media footer-left-border col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start">
+				<a class="social-media-link" target="_blank" href="<?= $facebook_url; ?>">
+					<?= file_get_contents(__DIR__  . '/images/square-facebook.svg'); ?>
+					<p>Facebook</p>
+				</a>
+				<a class="social-media-link" target="_blank" href="<?= $twitter_url; ?>">
+					<?= file_get_contents(__DIR__  . '/images/twitter.svg'); ?>
+					<p>Twitter</p>
+				</a>
+				<a class="social-media-link" target="_blank" href="<?= $linkedin_url; ?>">
+					<?= file_get_contents(__DIR__  . '/images/linkedin.svg'); ?>
+					<p>LinkedIn</p>
+				</a>
 			</div>
 		</div>
 	</footer>
