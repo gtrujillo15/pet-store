@@ -1,0 +1,63 @@
+.site-footer {
+    background-color: $color__background-tan;
+    .site-info {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        .footer-right-border {
+            border-right: 1px solid $color__background-gray;
+            @media (max-width: 767.98px) {
+                border-right: none;
+                border-bottom: 1px solid $color__background-gray;
+                padding: 20px;
+            }
+        }
+        .custom-logo {
+            height: 75px;
+            width: auto;
+        }
+        .contact-info {
+            @media (max-width: 767.98px) {
+                padding: 20px;
+            }
+        }
+        .footer-left-border, .social-media {
+            border-left: 1px solid $color__background-gray;
+            padding-left: 4rem;
+            @media (max-width: 767.98px) {
+                border-left: none; 
+                border-top: 1px solid $color__background-gray;
+                padding: 20px;
+            }
+            .social-media-link {
+                text-decoration: none;
+                color: $color__text-brown;
+                fill: $color__text-brown;
+                margin: 3px 0;
+                &:hover, &:focus, &:target {
+                    color: $color__text-black;
+                    fill: $color__background-black;
+                }
+                p {
+                    display: inline-block;
+                    font-weight: 500;
+                    &:hover, &:focus, &:target {
+                        text-decoration: underline;
+                    }
+                }
+                svg {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        a {
+            color: $color__text-brown;
+            text-decoration: none;
+            &:hover, &:focus, &:target {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

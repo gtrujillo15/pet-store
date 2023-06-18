@@ -59,3 +59,92 @@ function pet_store_customize_preview_js() {
 	wp_enqueue_script( 'pet-store-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'pet_store_customize_preview_js' );
+
+// FUSD FOUNDATIONS CUSTOMIZE
+function fusd_customize_register( $wp_customize ) {
+	// FOOTER
+	$wp_customize->add_section('pet_store_footer', array(
+        'title' => 'Footer Information',
+        'priority' => 150,
+	));
+	// Street Address
+	$wp_customize->add_setting( 'footer_street_address_textfield', array(
+		'sanitize_callback' => 'sanitize_textarea_field',
+	));
+	$wp_customize->add_control( 'footer_street_address_textfield', array(
+		'type' => 'textfield',
+		'section' => 'pet_store_footer',
+		'label' => __( 'Street Address Text Field' ),
+	));
+	// City, State Address
+	$wp_customize->add_setting( 'footer_city_state_address_textfield', array(
+		'sanitize_callback' => 'sanitize_textarea_field',
+	));
+	$wp_customize->add_control( 'footer_city_state_address_textfield', array(
+		'type' => 'textfield',
+		'section' => 'pet_store_footer',
+		'label' => __( 'City, State Address' ),
+	));
+	// Email Text Field
+	$wp_customize->add_setting( 'footer_email_textfield', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_email',
+	));
+	$wp_customize->add_control( 'footer_email_textfield', array(
+		'type' => 'email',
+		'section' => 'pet_store_footer',
+		'label' => __( 'Email Text Field' ),
+		'description' => __( 'Enter the email to appear in the footer.' ),
+	));
+	// Phone Number Text Field
+	$wp_customize->add_setting( 'footer_phone_textfield', array(
+		'sanitize_callback' => 'sanitize_textarea_field',
+	));
+	$wp_customize->add_control( 'footer_phone_textfield', array(
+		'type' => 'textfield',
+		'section' => 'pet_store_footer',
+		'label' => __( 'Phone Number Text Field' ),
+		'description' => __( 'Enter the phone number to appear in the footer.' ),
+	));
+
+
+	// SOCIAL MEDIA
+	$wp_customize->add_section('pet_store_social_media', array(
+        'title' => 'Social Media Links',
+        'priority' => 160,
+	));
+	// Twitter Link
+	$wp_customize->add_setting( 'footer_twitter_url', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control( 'footer_twitter_url', array(
+		'type' => 'url',
+		'section' => 'pet_store_social_media',
+		'label' => __( 'Twitter Link' ),
+		'description' => __( 'Enter in the URL for Twitter.' ),
+	));
+	// Facebook Link
+	$wp_customize->add_setting( 'footer_facebook_url', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control( 'footer_facebook_url', array(
+		'type' => 'url',
+		'section' => 'pet_store_social_media',
+		'label' => __( 'Facebook Link' ),
+		'description' => __( 'Enter in the URL for Facebook.' ),
+	));
+	// LinkedIn Link
+	$wp_customize->add_setting( 'footer_linkedin_url', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+	$wp_customize->add_control( 'footer_linkedin_url', array(
+		'type' => 'url',
+		'section' => 'pet_store_social_media',
+		'label' => __( 'LinkedIn Link' ),
+		'description' => __( 'Enter in the URL for LinkedIn.' ),
+	));
+}
+add_action( 'customize_register', 'fusd_customize_register' );
