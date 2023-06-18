@@ -403,7 +403,7 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin: 0;
 }
 
 dfn,
@@ -735,17 +735,26 @@ textarea {
   background-color: #eeddcd;
 }
 .site-footer .site-info {
-  max-width: 1170px;
+  max-width: 1000px;
   margin: auto;
   padding: 20px;
+}
+.site-footer .site-info .footer-right-border {
+  border-right: 1px solid #333;
 }
 .site-footer .site-info .custom-logo {
   height: 75px;
   width: auto;
 }
-.site-footer .site-info .footer-border {
-  border-right: 1px solid #333;
+.site-footer .site-info .footer-left-border {
   border-left: 1px solid #333;
+}
+.site-footer .site-info a {
+  color: #5c433f;
+  text-decoration: none;
+}
+.site-footer .site-info a:hover, .site-footer .site-info a:focus, .site-footer .site-info a:target {
+  text-decoration: underline;
 }
 
 /* Posts and pages

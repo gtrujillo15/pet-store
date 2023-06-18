@@ -1,16 +1,25 @@
 .site-footer {
     background-color: $color__background-tan;
     .site-info {
-        max-width: 1170px;
+        max-width: 1000px;
         margin: auto;
         padding: 20px;
+        .footer-right-border {
+            border-right: 1px solid #333;
+        }
         .custom-logo {
             height: 75px;
             width: auto;
         }
-        .footer-border {
-            border-right: 1px solid #333;
+        .footer-left-border {
             border-left: 1px solid #333;
+        }
+        a {
+            color: $color__text-brown;
+            text-decoration: none;
+            &:hover, &:focus, &:target {
+                text-decoration: underline;
+            }
         }
     }
 }
