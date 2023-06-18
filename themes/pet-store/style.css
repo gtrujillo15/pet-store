@@ -731,6 +731,23 @@ textarea {
   flex: 1 0 50%;
 }
 
+.site-footer {
+  background-color: #eeddcd;
+}
+.site-footer .site-info {
+  max-width: 1170px;
+  margin: auto;
+  padding: 20px;
+}
+.site-footer .site-info .custom-logo {
+  height: 75px;
+  width: auto;
+}
+.site-footer .site-info .footer-border {
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {

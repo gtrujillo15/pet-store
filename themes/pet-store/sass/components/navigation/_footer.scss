@@ -1,0 +1,16 @@
+.site-footer {
+    background-color: $color__background-tan;
+    .site-info {
+        max-width: 1170px;
+        margin: auto;
+        padding: 20px;
+        .custom-logo {
+            height: 75px;
+            width: auto;
+        }
+        .footer-border {
+            border-right: 1px solid #333;
+            border-left: 1px solid #333;
+        }
+    }
+}

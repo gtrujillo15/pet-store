@@ -12,21 +12,22 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pet-store' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pet-store' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pet-store' ), 'pet-store', '<a href="http://underscores.me/">gabriela trujillo</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+		<div class="site-info d-flex flex-row justify-content-center align-items-center">
+			<!-- Logo -->
+			<div class="col-12 col-lg-3">
+				<?php the_custom_logo(); ?>
+			</div>
+			<!-- Contact Info -->
+			<div class="footer-border col-12 col-lg-5">
+
+			</div>
+			<!-- Social Media -->
+			<div class="col-12 col-lg-4">
+				
+			</div>
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 
