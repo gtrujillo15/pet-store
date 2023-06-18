@@ -141,6 +141,7 @@ function pet_store_scripts() {
 	wp_enqueue_style( 'pet-store-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'pet-store-style', 'rtl', 'replace' );
 
+	wp_enqueue_script( 'pet-store-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
 	wp_enqueue_script( 'pet-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
