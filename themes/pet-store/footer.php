@@ -20,14 +20,14 @@ $instagram_url = get_theme_mod('footer_instagram_url');
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info d-flex flex-column flex-lg-row justify-content-center align-items-center">
+		<div class="site-info d-flex flex-column flex-md-row justify-content-center align-items-center">
 			<!-- Logo -->
-			<div class="footer-right-border col-12 col-lg-3">
+			<div class="footer-right-border col-12 col-md-3 d-flex justify-content-center align-items-center">
 				<?php the_custom_logo(); ?>
 			</div>
 			<!-- Contact Info -->
 			<?php if ($street_address || $city_state_address || $email || $phone): ?>
-				<div class="col-12 col-lg-5 d-flex flex-column justify-content-center align-items-center">
+				<div class="contact-info col-12 col-md-5 d-flex flex-column justify-content-center align-items-center">
 					<?php if ($street_address && $city_state_address): ?>
 						<a target="_blank" href="http://maps.google.com/?q=<?= $street_address; ?> <?= $city_state_address; ?>">
 							<p><?= $street_address; ?></p>
@@ -47,20 +47,28 @@ $instagram_url = get_theme_mod('footer_instagram_url');
 				</div>
 			<?php endif; ?>
 			<!-- Social Media -->
-			<div class="social-media footer-left-border col-12 col-lg-4 d-flex flex-column justify-content-center align-items-start">
-				<a class="social-media-link" target="_blank" href="<?= $facebook_url; ?>">
-					<?= file_get_contents(__DIR__  . '/images/square-facebook.svg'); ?>
-					<p>Facebook</p>
-				</a>
-				<a class="social-media-link" target="_blank" href="<?= $twitter_url; ?>">
-					<?= file_get_contents(__DIR__  . '/images/twitter.svg'); ?>
-					<p>Twitter</p>
-				</a>
-				<a class="social-media-link" target="_blank" href="<?= $linkedin_url; ?>">
-					<?= file_get_contents(__DIR__  . '/images/linkedin.svg'); ?>
-					<p>LinkedIn</p>
-				</a>
-			</div>
+			<?php if ($facebook_url || $twitter_url || $linkedin_url): ?>
+				<div class="social-media footer-left-border col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
+					<?php if ($facebook_url): ?>
+						<a class="social-media-link" target="_blank" href="<?= $facebook_url; ?>">
+							<?= file_get_contents(__DIR__  . '/images/square-facebook.svg'); ?>
+							<p>Facebook</p>
+						</a>
+					<?php endif;
+					if ($twitter_url): ?>
+						<a class="social-media-link" target="_blank" href="<?= $twitter_url; ?>">
+							<?= file_get_contents(__DIR__  . '/images/twitter.svg'); ?>
+							<p>Twitter</p>
+						</a>
+					<?php endif;
+					if ($linkedin_url): ?>
+						<a class="social-media-link" target="_blank" href="<?= $linkedin_url; ?>">
+							<?= file_get_contents(__DIR__  . '/images/linkedin.svg'); ?>
+							<p>LinkedIn</p>
+						</a>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</footer>
 </div>
