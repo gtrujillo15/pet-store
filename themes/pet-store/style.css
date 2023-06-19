@@ -400,6 +400,8 @@ h4,
 h5,
 h6 {
   clear: both;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
 p {
@@ -816,7 +818,7 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
 }
 
 .page-links {
