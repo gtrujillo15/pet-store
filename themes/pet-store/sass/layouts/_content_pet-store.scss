@@ -1,0 +1,74 @@
+.content-section {
+    background-color: $color__background-red;
+    .content-section-wrapper {
+        .content-content {
+            padding: 30px 100px;
+
+            @media (max-width: 991.98px) {
+                padding: 51px 30px;
+            }
+            @media (min-width: 992px) and (max-width: 1604px) {
+                padding: 30px;
+            }
+            h3 {
+                font-family: $font__heading;
+                font-style: italic;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 120%;
+                color: $color__text-white;
+                margin-bottom: 13px;
+
+                @media (max-width: 991.98px) {
+                    font-size: 36px; 
+                }
+
+            }
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 160%;
+                color: $color__text_extra-light-slate;
+                margin: 13px 0;
+                padding-left: 14rem;
+
+                @media (max-width: 991.98px) {
+                    font-size: 18px; 
+                }
+
+                @media (max-width: 575.98px) {
+                    padding-left: 0;
+                }
+                @media (min-width: 576px) and (max-width: 991.98px) {
+                    padding-left: 7rem;
+                    font-size: 16px;
+                }
+                @media (min-width: 992px) and (max-width: 1455px) {
+                    padding-left: 0;
+                }
+            }
+            .content-link {
+                margin-top: 13px;
+            }
+        }
+        .content-image {
+            height: 680px;
+            max-height: 680px;
+            @media (max-width: 585px) {
+                height: auto;
+                max-height: auto;
+            }
+            @media (min-width: 586px) and (max-width: 991.98px) {
+                height: 650px;
+                max-height: 650px;
+            }
+            img {
+                height: inherit;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+}
