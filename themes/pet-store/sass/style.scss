@@ -84,6 +84,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+@import "plugins/woocommerce/featured";
+@import "plugins/woocommerce/products";
+@import "plugins/woocommerce/single-product";
+@import "plugins/woocommerce/checkout";
+@import "plugins/woocommerce/components";
+@import "plugins/woocommerce/widgets";
+@import "plugins/woocommerce/tables";
+@import "abstracts/abstracts";
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
